@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>what's tattoo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: black;
+            color: white;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        /* wrap 감싸주기 */
+        #wrap {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* nav 시작 */
+        #nav {
+            width: 100%;
+            height: 100px;
+            background: white;
+            position: fixed;
+            /* 네비 고정해두면 좋을 것 같아서 배우진 않았지만 추가해봤습니다. */
+            top: 0;
+            z-index:8482;
+            padding: 0 5%;
+        }
+
+        #nav li {
+            list-style: none;
+            float: left;
+            width: 11%;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+
+
+        }
+
+        #nav li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #nav li a:hover {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+        }
+
+        #nav #logo {
+            width: 25%;
+            text-align: left;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 95px;
+            text-shadow: 8px 5px 3px rgba(57, 57, 57, 0.4);
+            margin-right: 14%;
+        }
+
+
+        /* 메인 큰 타이틀,텍스트 및 스크롤 다운 모양 */
+        h1 {
+            color: white;
+            margin-top: 130px;
+            text-align: center;
+            font-size: 120px;
+        }
+
+        #sub_title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        #scroll_down {
+            width: 28px;
+            height: 60px;
+            border: 8px solid white;
+            border-radius: 35px;
+            margin: 0 auto;
+            margin-top: 200px;
+        }
+
+        #scroll_down_o {
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 100%;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        #scroll_down_text {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        /* section 시작 */
+        section {
+            width: 100%;
+            height: 100%;
+            margin-top: 50px;
+        }
+
+        section #white_box {
+            width: 90%;
+            height: 600px;
+            background-color: white;
+            margin: 100px auto;
+            padding: 1px;
+        }
+
+        section #white_box h2 {
+            width: 100%;
+            color: black;
+            text-align: center;
+            margin: 20px 0 20px 0;
+        }
+
+        section #white_box p {
+            color: black;
+            text-align: center;
+            margin: 30px 0 30px 0;
+        }
+
+        section #white_box ul {
+            width: 90%;
+            height: 70%;
+            margin: 0 auto;
+        }
+
+        section #white_box ul li {
+            width: 33%;
+            height: 100%;
+            float: left;
+ 
+        }
+
+        section #white_box ul #w100 {
+            width: 80%;
+            height: 100%;
+            position: relative;
+            left:10%;
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            
+        }
+
+        /* footer */
+        footer {
+            width: 100%;
+            height: 140px;
+            background-color: rgb(55, 55, 55);
+            text-align: right;
+            position: relative;
+        }
+
+        footer #footer_box {
+            width: 98%;
+            height: 40%;
+            position: absolute;
+            bottom: 10px;
+        }
+
+        /* 네비,메인타이틀 반응형 */
+        @media only screen and (max-width: 1100px) {
+            #nav {
+                height: 80px;
+                font-size: 8px
+            }
+
+            #nav li {
+                width: 15%;
+                height: 80px;
+                line-height: 80px;
+            }
+
+            #nav #logo {
+                width: 10%;
+                font-size: 14px;
+                margin-right: 40px;
+                line-height: 80px;
+            }
+
+            /* main */
+            #sub_title {
+                font-size: 13px;
+            }
+
+            h1 {
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <!-- top nav -->
+        <ul id="nav">
+            <li id="logo"><a href="./index.html">TATTOO</a></li>
+            <li><a href="./what's-tattoo.html">WHAT'S TATTOO</a></li>
+            <li><a href="./tattoo_style.html">TATTOO STYLE</a></li>
+            <li><a href="./tattoo_artists.html">TATTOO ARTISTS</a></li>
+            <li><a href="./tattoo_tools.html">TATTOO TOOLS</a></li>
+            <li><a href="./My_portfolio.html">MY PORTFOLIO</a></li>
+        </ul>
+        <!-- main 시작 -->
+        <h1>What's tattoo?</h1>
+        <p id="sub_title">
+            “타투”는 인간의 피부에 잉크나 색소를 삽입해 그림이나 기호를 새기는 예술 행위입니다.<br>
+            역사적으로 다양한 문화에서 종교적, 사회적, 개인적 의미를 부여하며 발전해왔습니다.
+        </p>
+        <div id="scroll_down">
+            <div id="scroll_down_o"></div>
+        </div>
+        <p id="scroll_down_text">scroll down</p>
+
+        <!-- section 시작 -->
+        <section>
+            <div id="white_box">
+                <h2>HISTORY</h2>
+                <ul>
+                    <li id="w100"><img src="./img/타투 역사.jpg" alt="tattoo_history"></li>
+                </ul>
+                <p>타투의 역사는 기원전으로 거슬러 올라가며, 수천년 동안 전 세계 다양한 문화에서 그 기원을 찾을 수 있습니다.<br>
+                    고대 이집트에서부터 폴리네시아 부족에 이르기까지, 타투는 종교적 의식이나 사회적 지위를 나타내는 중요한 역할을 해왔습니다.
+                </p>
+            </div>
+
+            <div id="white_box">
+                <h2>CULTURAL MEANING</h2>
+                <ul>
+                    <li><img src="./img/컬처1.jpg" alt="tattoo_cultural_1"></li>
+                    <li><img src="./img/컬처3.jpg" alt="tattoo_cultural_3"></li>
+                    <li><img src="./img/컬쳐2.jpg" alt="tattoo_cultural_2"></li>
+                </ul>
+                <p>오늘날 타투는 개성을 표현하는 수단이자 다양한 문화에서 고유한 의미를 가지고 있습니다.<br>
+                    일본에서의 "이레즈미" 전통적으로 용이나 호랑이와 같은 상징적인것을 표현하며,
+                    마오리 문화에서는 얼굴 타투인 "모코"가 신분과 지위를 나타냅니다.
+                </p>
+            </div>
+
+            <div id="white_box">
+                <h2>KOREA TATTOO</h2>
+                <ul>
+                    <li id="w100"><img src="./img/한국 타투.jpg" alt="korea_tattoo"></li>
+                </ul>
+                <p>한국에서는 타투가 의료 행위(침습행위)로 분류되어 의사 면허가 없는 사람은 타투를 할 수 없습니다.<br>
+                이로인해 많은 아티스트들이 법적허가를 받지 못한 상태에서 작업을 진행하고 있습니다. 반영구(눈썹문신,두피문신,입술문신) 또한 법적으로 인정받지 못하고 있습니다.
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <div id="footer_box">
+                <p>&copy; 2024. 박민규 ALL Right reserved.</p>
+                <p>- Tattoo web page - 010 - 8482 -1244 | Mail : dbullssg123@naver.com | 경기도 의왕시 계원대학로 66</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
