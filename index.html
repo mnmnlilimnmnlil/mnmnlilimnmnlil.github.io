@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>감정이란</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      ul,
+      li {
+        list-style: none;
+      }
+
+      nav {
+        width: 100%;
+        height: 80px;
+        background: white;
+        position: fixed;
+        z-index: 9999;
+        border-bottom: 1px solid rgb(201, 201, 201);
+      }
+
+      header {
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        background: white;
+      }
+
+      header #logo {
+        width: 60px;
+        height: 100%;
+        background: url("img/logo.jpg") center center / cover no-repeat;
+        float: left;
+      }
+
+      header ul {
+        width: 80%;
+        height: 100%;
+        float: right;
+      }
+
+      header ul li {
+        width: 60px;
+        height: 100%;
+        float: right;
+        height: 100%;
+        line-height: 80px;
+      }
+
+      header ul li a {
+        color: rgb(53, 53, 53);
+        font-weight: 400;
+      }
+
+      header ul li:nth-child(5) a:hover {
+        color: rgb(255, 215, 0);
+        font-weight: 800;
+      }
+
+      header ul li:nth-child(4) a:hover {
+        color: rgb(25, 158, 201);
+        font-weight: 800;
+      }
+
+      header ul li:nth-child(3) a:hover {
+        color: rgb(246, 107, 50);
+        font-weight: 800;
+      }
+
+      header ul li:nth-child(2) a:hover {
+        color: rgb(214, 33, 16);
+        font-weight: 800;
+      }
+
+      header ul li:nth-child(1) a:hover {
+        color: rgb(160, 215, 69);
+        font-weight: 800;
+      }
+
+      #section_1 {
+        width: 100%;
+        height: 100vh;
+        background: black;
+      }
+
+      #section_1 #main_img {
+        width: 50%;
+        height: 100%;
+        background: url("img/main_img.gif") center center / cover no-repeat;
+        float: right;
+        position: relative;
+        z-index: 1;
+      }
+
+      #section_1 #main_text {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        color: white;
+        z-index: 3;
+      }
+
+      #section_1 #main_text #main_text_box {
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        top: 36%;
+        transition: 0.5s;
+      }
+
+      #section_1 #main_text #main_text_box h1 {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 6vw;
+      }
+
+      #section_1 #main_text #main_text_box p {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 1.3vw;
+      }
+
+      #mouse_down {
+        width: 100%;
+        height: 10%;
+        position: absolute;
+        bottom: 0;
+      }
+
+      #mouse_down #mouse_o {
+        width: 30px;
+        height: 60px;
+        border-radius: 24px;
+        border: 5px solid white;
+        margin: 0 auto;
+      }
+
+      #mouse_down #mouse_o #mouse_oo {
+        width: 10px;
+        height: 10px;
+        background: white;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 10px;
+        display: block;
+      }
+
+      #section_2 {
+        width: 100%;
+        height: 650vh;
+      }
+
+      #section_2 marquee {
+        width: 100%;
+        font-size: 6vw;
+        font-weight: 800;
+        color: rgb(240, 240, 240);
+      }
+
+      #section_2 #about_box {
+        width: 60%;
+        height: 80vh;
+        margin: 0 auto;
+      }
+
+      #section_2 #about_box #img_box {
+        width: 50%;
+        height: 100%;
+        float: left;
+        background: url(img/about.jpg) center center / cover no-repeat;
+        border-radius: 3%;
+      }
+
+      #section_2 #about_box #about_text {
+        width: 42%;
+        height: 100%;
+        float: left;
+        margin-left: 8%;
+        position: relative;
+      }
+
+      #section_2 #about_box #about_text ul {
+        width: 100%;
+        position: absolute;
+        top: 33%;
+      }
+
+      #section_2 #about_box #about_text ul li:nth-child(1) {
+        font-weight: 300;
+        color: gray;
+        font-size: 1vw;
+      }
+
+      #section_2 #about_box #about_text ul li:nth-child(2) {
+        font-weight: 700;
+        font-size: 3vw;
+        color: rgb(22, 22, 22);
+      }
+
+      #section_2 #about_box #about_text ul li:nth-child(3) {
+        font-weight: 400;
+        font-size: 1.4vw;
+        color: rgb(49, 49, 49);
+        margin-top: 10px;
+      }
+
+      /* happy 시작 */
+      #section_2 #happy_box {
+        width: 70%;
+        height: 80vh;
+        margin: 0 auto;
+        background: white;
+        transition: all 0.3s;
+        border-radius: 15px;
+        clear: both;
+        margin-bottom: 200px;
+      }
+
+      #section_2 #happy_box:hover {
+        background-color: rgb(255, 215, 0);
+        transition: all 0.3s;
+        color: white;
+      }
+
+      #section_2 #happy_box #img_box {
+        width: 46%;
+        height: 100%;
+        float: right;
+        background: url(img/happy.jpg) center center / cover no-repeat;
+        border-radius: 15px;
+        filter: grayscale(100%);
+        transition: all 0.3s;
+      }
+
+      #section_2 #happy_box #img_box:hover {
+        filter: grayscale(0%);
+        transition: all 0.3s;
+      }
+
+      #section_2 #happy_box #about_text {
+        width: 54%;
+        height: 100%;
+        float: right;
+        position: relative;
+      }
+
+      #section_2 #happy_box #about_text ul {
+        width: 90%;
+        position: absolute;
+        top: 26%;
+        left: 5%;
+      }
+
+      #section_2 #happy_box #about_text ul li:nth-child(1) {
+        font-weight: 300;
+        font-size: 1vw;
+      }
+
+      #section_2 #happy_box #about_text ul li:nth-child(2) {
+        font-weight: 700;
+        font-size: 3vw;
+      }
+
+      #section_2 #happy_box #about_text ul li:nth-child(3) {
+        font-weight: 400;
+        font-size: 1.4vw;
+        margin-top: 10px;
+      }
+
+      #section_2 #happy_box #about_text ul li:nth-child(4) button {
+        width: 120px;
+        height: 40px;
+        margin-top: 60px;
+        background: white;
+        border: 1px solid rgb(196, 196, 196);
+      }
+
+      #section_2 #happy_box #about_text ul li:nth-child(4) button a {
+        display: block;
+        font-size: 14px;
+      }
+
+      #section_2 #happy_box #about_text ul li:nth-child(4) button a:hover {
+        font-weight: 600;
+        color: rgb(255, 215, 0);
+      }
+
+      /* 슬픔 시작 */
+
+      #section_2 #sad_box {
+        clear: both;
+        width: 70%;
+        height: 80vh;
+        margin: 0 auto;
+        background: white;
+        transition: all 0.3s;
+        border-radius: 15px;
+        margin-bottom: 200px;
+      }
+
+      #section_2 #sad_box:hover {
+        background-color: rgb(25, 158, 201);
+        transition: all 0.3s;
+        color: white;
+      }
+
+      #section_2 #sad_box #img_box {
+        width: 46%;
+        height: 100%;
+        float: left;
+        background: url(img/sad.jpg) center center / cover no-repeat;
+        border-radius: 15px;
+        filter: grayscale(100%);
+        transition: all 0.3s;
+      }
+
+      #section_2 #sad_box #img_box:hover {
+        filter: grayscale(0%);
+        transition: all 0.3s;
+      }
+
+      #section_2 #sad_box #about_text {
+        width: 54%;
+        height: 100%;
+        float: left;
+        position: relative;
+      }
+
+      #section_2 #sad_box #about_text ul {
+        width: 90%;
+        position: absolute;
+        top: 26%;
+        right: 5%;
+      }
+
+      #section_2 #sad_box #about_text ul li:nth-child(1) {
+        font-weight: 300;
+        font-size: 1vw;
+      }
+
+      #section_2 #sad_box #about_text ul li:nth-child(2) {
+        font-weight: 700;
+        font-size: 3vw;
+      }
+
+      #section_2 #sad_box #about_text ul li:nth-child(3) {
+        font-weight: 400;
+        font-size: 1.4vw;
+        margin-top: 10px;
+      }
+
+      #section_2 #sad_box #about_text ul li:nth-child(4) button {
+        width: 120px;
+        height: 40px;
+        margin-top: 60px;
+        background: white;
+        border: 1px solid rgb(196, 196, 196);
+      }
+      #section_2 #sad_box #about_text ul li:nth-child(4) button a:hover {
+        font-weight: 600;
+        color: rgb(25, 158, 201);
+      }
+
+      /* 슬픔 끝 */
+
+      /* 불안 시작 */
+      #section_2 #nurvous_box {
+        width: 70%;
+        height: 80vh;
+        margin: 0 auto;
+        background: white;
+        transition: all 0.3s;
+        border-radius: 15px;
+        clear: both;
+        margin-bottom: 200px;
+      }
+
+      #section_2 #nurvous_box:hover {
+        background-color: rgb(246, 107, 50);
+        transition: all 0.3s;
+        color: white;
+      }
+
+      #section_2 #nurvous_box #img_box {
+        width: 46%;
+        height: 100%;
+        float: right;
+        background: url(img/nurvous.jpg) center center / cover no-repeat;
+        border-radius: 15px;
+        filter: grayscale(100%);
+        transition: all 0.3s;
+      }
+
+      #section_2 #nurvous_box #img_box:hover {
+        filter: grayscale(0%);
+        transition: all 0.3s;
+      }
+
+      #section_2 #nurvous_box #about_text {
+        width: 54%;
+        height: 100%;
+        float: right;
+        position: relative;
+      }
+
+      #section_2 #nurvous_box #about_text ul {
+        width: 90%;
+        position: absolute;
+        top: 26%;
+        left: 5%;
+      }
+
+      #section_2 #nurvous_box #about_text ul li:nth-child(1) {
+        font-weight: 300;
+        font-size: 1vw;
+      }
+
+      #section_2 #nurvous_box #about_text ul li:nth-child(2) {
+        font-weight: 700;
+        font-size: 3vw;
+      }
+
+      #section_2 #nurvous_box #about_text ul li:nth-child(3) {
+        font-weight: 400;
+        font-size: 1.4vw;
+        margin-top: 10px;
+      }
+
+      #section_2 #nurvous_box #about_text ul li:nth-child(4) button {
+        width: 120px;
+        height: 40px;
+        margin-top: 60px;
+        background: white;
+        border: 1px solid rgb(196, 196, 196);
+      }
+
+      #section_2 #nurvous_box #about_text ul li:nth-child(4) button a {
+        display: block;
+        font-size: 14px;
+      }
+
+      #section_2 #nurvous_box #about_text ul li:nth-child(4) button a:hover {
+        font-weight: 600;
+        color: rgb(246, 107, 50);
+      }
+
+      /* 불안 끝 */
+      /* 분노 시작 */
+      #section_2 #anger_box {
+        clear: both;
+        width: 70%;
+        height: 80vh;
+        margin: 0 auto;
+        background: white;
+        transition: all 0.3s;
+        border-radius: 15px;
+        margin-bottom: 200px;
+      }
+
+      #section_2 #anger_box:hover {
+        background-color: rgb(214, 33, 16);
+        transition: all 0.3s;
+        color: white;
+      }
+
+      #section_2 #anger_box #img_box {
+        width: 46%;
+        height: 100%;
+        float: left;
+        background: url(img/anger.jpg) center center / cover no-repeat;
+        border-radius: 15px;
+        filter: grayscale(100%);
+        transition: all 0.3s;
+      }
+
+      #section_2 #anger_box #img_box:hover {
+        filter: grayscale(0%);
+        transition: all 0.3s;
+      }
+
+      #section_2 #anger_box #about_text {
+        width: 54%;
+        height: 100%;
+        float: left;
+        position: relative;
+      }
+
+      #section_2 #anger_box #about_text ul {
+        width: 90%;
+        position: absolute;
+        top: 26%;
+        right: 5%;
+      }
+
+      #section_2 #anger_box #about_text ul li:nth-child(1) {
+        font-weight: 300;
+        font-size: 1vw;
+      }
+
+      #section_2 #anger_box #about_text ul li:nth-child(2) {
+        font-weight: 700;
+        font-size: 3vw;
+      }
+
+      #section_2 #anger_box #about_text ul li:nth-child(3) {
+        font-weight: 400;
+        font-size: 1.4vw;
+        margin-top: 10px;
+      }
+
+      #section_2 #anger_box #about_text ul li:nth-child(4) button {
+        width: 120px;
+        height: 40px;
+        margin-top: 60px;
+        background: white;
+        border: 1px solid rgb(196, 196, 196);
+      }
+      #section_2 #anger_box #about_text ul li:nth-child(4) button a:hover {
+        font-weight: 600;
+        color: rgb(214, 33, 16);
+      }
+
+      /* 분노 끝 */
+      /* 혐오 시작*/
+      #section_2 #aversion_box {
+        width: 70%;
+        height: 80vh;
+        margin: 0 auto;
+        background: white;
+        transition: all 0.3s;
+        border-radius: 15px;
+        clear: both;
+        margin-bottom: 200px;
+      }
+
+      #section_2 #aversion_box:hover {
+        background-color: rgb(137, 215, 69);
+        transition: all 0.3s;
+        color: white;
+      }
+
+      #section_2 #aversion_box #img_box {
+        width: 46%;
+        height: 100%;
+        float: right;
+        background: url(img/AVERSION.jpg) center center / cover no-repeat;
+        border-radius: 15px;
+        filter: grayscale(100%);
+        transition: all 0.3s;
+      }
+
+      #section_2 #aversion_box #img_box:hover {
+        filter: grayscale(0%);
+        transition: all 0.3s;
+      }
+
+      #section_2 #aversion_box #about_text {
+        width: 54%;
+        height: 100%;
+        float: right;
+        position: relative;
+      }
+
+      #section_2 #aversion_box #about_text ul {
+        width: 90%;
+        position: absolute;
+        top: 26%;
+        left: 5%;
+      }
+
+      #section_2 #aversion_box #about_text ul li:nth-child(1) {
+        font-weight: 300;
+        font-size: 1vw;
+      }
+
+      #section_2 #aversion_box #about_text ul li:nth-child(2) {
+        font-weight: 700;
+        font-size: 3vw;
+      }
+
+      #section_2 #aversion_box #about_text ul li:nth-child(3) {
+        font-weight: 400;
+        font-size: 1.4vw;
+        margin-top: 10px;
+      }
+
+      #section_2 #aversion_box #about_text ul li:nth-child(4) button {
+        width: 120px;
+        height: 40px;
+        margin-top: 60px;
+        background: white;
+        border: 1px solid rgb(196, 196, 196);
+      }
+
+      #section_2
+        #nurvouaversion_boxs_box
+        #about_text
+        ul
+        li:nth-child(4)
+        button
+        a {
+        display: block;
+        font-size: 14px;
+      }
+
+      #section_2 #aversion_box #about_text ul li:nth-child(4) button a:hover {
+        font-weight: 600;
+        color: rgb(160, 215, 69);
+      }
+
+      /* 혐오 끝 */
+
+      /* 푸터 */
+      footer {
+        width: 100%;
+        height: 150px;
+        background-color: gray;
+        position: relative;
+        bottom: 0;
+        padding: 20px;
+        color: white;
+        box-sizing: border-box;
+      }
+
+
+      .foot_menu li:nth-child(1) a:hover {
+        color: rgb(255, 215, 0);
+        font-weight: 800;
+      }
+
+      .foot_menu li:nth-child(2) a:hover {
+        color: rgb(25, 158, 201);
+        font-weight: 800;
+      }
+
+      .foot_menu li:nth-child(3) a:hover {
+        color: rgb(246, 107, 50);
+        font-weight: 800;
+      }
+
+      .foot_menu li:nth-child(4) a:hover {
+        color: rgb(214, 33, 16);
+        font-weight: 800;
+      }
+
+      .foot_menu li:nth-child(5) a:hover {
+        color: rgb(160, 215, 69);
+        font-weight: 800;
+      }
+
+      footer p {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      @media screen and (max-width: 1200px) {
+        #section_2 {
+          height: 860vh;
+        }
+        #section_1 #main_img {
+          width: 100%;
+        }
+
+        #section_1 #main_text #main_text_box {
+          top: 10%;
+          transition: 0.5s;
+        }
+
+        #section_1 #main_text #main_text_box h1 {
+          font-size: 8vw;
+        }
+
+        #section_1 #main_text #main_text_box p {
+          font-size: 3vw;
+        }
+
+        /* about */
+        #section_2 #about_box #img_box {
+          width: 100%;
+        }
+
+        #section_2 #about_box #about_text {
+          width: 100%;
+          height: 40%;
+          margin-left: 0;
+        }
+
+        #section_2 #about_box #about_text ul {
+          top: 20%;
+        }
+
+        #section_2 #about_box #about_text ul li:nth-child(1) {
+          font-size: 2vw;
+        }
+
+        #section_2 #about_box #about_text ul li:nth-child(2) {
+          font-size: 4vw;
+        }
+
+        #section_2 #about_box #about_text ul li:nth-child(3) {
+          font-size: 2vw;
+        }
+
+        /* happy */
+        #section_2 #happy_box:hover {
+          color: rgb(255, 215, 0);
+        }
+
+        #section_2 #happy_box #img_box {
+          width: 100%;
+        }
+
+        #section_2 #happy_box #about_text {
+          margin-bottom: 200px;
+          width: 100%;
+          height: 40%;
+          margin-right: 0;
+        }
+
+        #section_2 #happy_box #about_text ul {
+          top: 20%;
+        }
+
+        #section_2 #happy_box #about_text ul li:nth-child(1) {
+          font-size: 2vw;
+        }
+
+        #section_2 #happy_box #about_text ul li:nth-child(2) {
+          font-size: 4vw;
+        }
+
+        #section_2 #happy_box #about_text ul li:nth-child(3) {
+          font-size: 2vw;
+        }
+
+        #section_2 #happy_box #about_text ul li:nth-child(4) {
+          display: none;
+        }
+
+        /* sad */
+        #section_2 #sad_box:hover {
+          color: rgb(25, 158, 201);
+        }
+
+        #section_2 #sad_box #img_box {
+          width: 100%;
+        }
+
+        #section_2 #sad_box #about_text {
+          margin-bottom: 200px;
+          width: 100%;
+          height: 40%;
+          margin-left: 0;
+        }
+
+        #section_2 #sad_box #about_text ul {
+          top: 20%;
+        }
+
+        #section_2 #sad_box #about_text ul li:nth-child(1) {
+          font-size: 2vw;
+        }
+
+        #section_2 #sad_box #about_text ul li:nth-child(2) {
+          font-size: 4vw;
+        }
+
+        #section_2 #sad_box #about_text ul li:nth-child(3) {
+          font-size: 2vw;
+        }
+
+        #section_2 #sad_box #about_text ul li:nth-child(4) {
+          display: none;
+        }
+
+        /* nurvous */
+
+        #section_2 #nurvous_box:hover {
+          color: rgb(246, 107, 50);
+        }
+
+        #section_2 #nurvous_box #img_box {
+          width: 100%;
+        }
+
+        #section_2 #nurvous_box #about_text {
+          margin-bottom: 200px;
+          width: 100%;
+          height: 40%;
+          margin-right: 0;
+        }
+
+        #section_2 #nurvous_box #about_text ul {
+          top: 20%;
+        }
+
+        #section_2 #nurvous_box #about_text ul li:nth-child(1) {
+          font-size: 2vw;
+        }
+
+        #section_2 #nurvous_box #about_text ul li:nth-child(2) {
+          font-size: 4vw;
+        }
+
+        #section_2 #nurvous_box #about_text ul li:nth-child(3) {
+          font-size: 2vw;
+        }
+
+        #section_2 #nurvous_box #about_text ul li:nth-child(4) {
+          display: none;
+        }
+
+        /* anger */
+
+        #section_2 #anger_box:hover {
+          color: rgb(214, 33, 16);
+        }
+
+        #section_2 #anger_box #img_box {
+          width: 100%;
+        }
+
+        #section_2 #anger_box #about_text {
+          margin-bottom: 200px;
+          width: 100%;
+          height: 40%;
+          margin-left: 0;
+        }
+
+        #section_2 #anger_box #about_text ul {
+          top: 20%;
+        }
+
+        #section_2 #anger_box #about_text ul li:nth-child(1) {
+          font-size: 2vw;
+        }
+
+        #section_2 #anger_box #about_text ul li:nth-child(2) {
+          font-size: 4vw;
+        }
+
+        #section_2 #anger_box #about_text ul li:nth-child(3) {
+          font-size: 2vw;
+        }
+
+        #section_2 #anger_box #about_text ul li:nth-child(4) {
+          display: none;
+        }
+        /* aversion */
+
+        #section_2 #aversion_box:hover {
+          color: rgb(160, 215, 69);
+        }
+
+        #section_2 #aversion_box #img_box {
+          width: 100%;
+        }
+
+        #section_2 #aversion_box #about_text {
+          margin-bottom: 200px;
+          width: 100%;
+          height: 40%;
+          margin-right: 0;
+        }
+
+        #section_2 #aversion_box #about_text ul {
+          top: 20%;
+        }
+
+        #section_2 #aversion_box #about_text ul li:nth-child(1) {
+          font-size: 2vw;
+        }
+
+        #section_2 #aversion_box #about_text ul li:nth-child(2) {
+          font-size: 4vw;
+        }
+
+        #section_2 #aversion_box #about_text ul li:nth-child(3) {
+          font-size: 2vw;
+        }
+
+        #section_2 #aversion_box #about_text ul li:nth-child(4) {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        #section_2 {
+          height: 950vh;
+        }
+        #section_2 #about_box #about_text {
+          width: 100%;
+          height: 60%;
+          margin-left: 0;
+        }
+
+        #section_2 #about_box #about_text ul li:nth-child(1) {
+          font-size: 20px;
+        }
+
+        #section_2 #about_box #about_text ul li:nth-child(2) {
+          font-size: 36px;
+        }
+
+        #section_2 #about_box #about_text ul li:nth-child(3) {
+          font-size: 22px;
+        }
+
+        /* happy */
+
+        #section_2 #happy_box #about_text {
+          width: 100%;
+          height: 60%;
+          margin-right: 0;
+        }
+
+        #section_2 #happy_box #about_text ul li:nth-child(1) {
+          font-size: 20px;
+        }
+
+        #section_2 #happy_box #about_text ul li:nth-child(2) {
+          font-size: 36px;
+        }
+
+        #section_2 #happy_box #about_text ul li:nth-child(3) {
+          font-size: 22px;
+        }
+
+        #section_2 #happy_box #about_text ul li:nth-child(4) {
+          display: none;
+        }
+
+        /* sad */
+
+        #section_2 #sad_box #about_text {
+          width: 100%;
+          height: 60%;
+          margin-left: 0;
+        }
+
+        #section_2 #sad_box #about_text ul li:nth-child(1) {
+          font-size: 20px;
+        }
+
+        #section_2 #sad_box #about_text ul li:nth-child(2) {
+          font-size: 36px;
+        }
+
+        #section_2 #sad_box #about_text ul li:nth-child(3) {
+          font-size: 22px;
+        }
+
+        #section_2 #sad_box #about_text ul li:nth-child(4) {
+          display: none;
+        }
+
+        /* nurvous */
+        #section_2 #nurvous_box #about_text {
+          width: 100%;
+          height: 60%;
+          margin-right: 0;
+        }
+
+        #section_2 #nurvous_box #about_text ul li:nth-child(1) {
+          font-size: 20px;
+        }
+
+        #section_2 #nurvous_box #about_text ul li:nth-child(2) {
+          font-size: 36px;
+        }
+
+        #section_2 #nurvous_box #about_text ul li:nth-child(3) {
+          font-size: 22px;
+        }
+
+        #section_2 #nurvous_box #about_text ul li:nth-child(4) {
+          display: none;
+        }
+        /* anger */
+        #section_2 #anger_box #about_text {
+          width: 100%;
+          height: 60%;
+          margin-left: 0;
+        }
+
+        #section_2 #anger_box #about_text ul li:nth-child(1) {
+          font-size: 20px;
+        }
+
+        #section_2 #anger_box #about_text ul li:nth-child(2) {
+          font-size: 36px;
+        }
+
+        #section_2 #anger_box #about_text ul li:nth-child(3) {
+          font-size: 22px;
+        }
+
+        #section_2 #anger_box #about_text ul li:nth-child(4) {
+          display: none;
+        }
+        /* aversion */
+        #section_2 #aversion_box #about_text {
+          width: 100%;
+          height: 60%;
+          margin-right: 0;
+        }
+
+        #section_2 #aversion_box #about_text ul li:nth-child(1) {
+          font-size: 20px;
+        }
+
+        #section_2 #aversion_box #about_text ul li:nth-child(2) {
+          font-size: 36px;
+        }
+
+        #section_2 #aversion_box #about_text ul li:nth-child(3) {
+          font-size: 22px;
+        }
+
+        #section_2 #aversion_box #about_text ul li:nth-child(4) {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <wrap>
+      <nav>
+        <header>
+          <a href="index.html"><div id="logo"></div></a>
+          <ul>
+            <li><a href="혐오.html">혐오</a></li>
+            <li><a href="분노.html">분노</a></li>
+            <li><a href="불안.html">불안</a></li>
+            <li><a href="슬픔.html">슬픔</a></li>
+            <li><a href="행복.html">행복</a></li>
+          </ul>
+        </header>
+      </nav>
+      <section id="section_1">
+        <div id="main_img"></div>
+        <div id="main_text">
+          <div id="main_text_box">
+            <h1>감정이란</h1>
+            <p>어떤 현상이나 일에 대하여 일어나는 마음이나,느끼는 기분</p>
+          </div>
+          <div id="mouse_down">
+            <div id="mouse_o">
+              <sapn id="mouse_oo"></sapn>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 상단 메인 끝 -->
+
+      <!-- section 1 ,marquee 시작 -->
+      <section id="section_2">
+        <marquee direction="left">
+          행복 幸福 슬픔 悲傷 두려움 恐怖 분노 憤怒 사랑 愛 행복 幸福 슬픔 悲傷
+          두려움 恐怖 분노 憤怒 사랑 愛 행복 幸福 슬픔 悲傷 두려움 恐怖 분노
+          憤怒 사랑 愛 행복 幸福 슬픔 悲傷 두려움 恐怖 분노 憤怒 사랑 愛 행복
+          幸福 슬픔 悲傷 두려움 恐怖 분노 憤怒 사랑 愛 행복 幸福 슬픔 悲傷
+          두려움 恐怖 분노 憤怒 사랑 愛 행복 幸福 슬픔 悲傷 두려움 恐怖 분노
+          憤怒 사랑 愛 행복 幸福 슬픔 悲傷 두려움 恐怖 분노 憤怒 사랑 愛
+        </marquee>
+        <div id="about_box">
+          <div id="img_box"></div>
+
+          <div id="about_text">
+            <ul>
+              <li>ABOUT</li>
+              <li>소개</li>
+              <li>
+                모두가 각자의 감정을 가지고 살아갑니다. 이 사이트는 다섯개의
+                감정을 탐구하고, 그 감정이 나에게 미치는 영향과 그것을 성장으로
+                만드는 방법을 나누기 위한 공간입니다.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <marquee direction="right"
+          >행복 幸福 슬픔 悲傷 두려움 恐怖 분노 憤怒 사랑 愛 행복 幸福 슬픔 悲傷
+          두려움 恐怖 분노 憤怒 사랑 愛 행복 幸福 슬픔 悲傷 두려움 恐怖 분노
+          憤怒 사랑 愛 행복 幸福 슬픔 悲傷 두려움 恐怖 분노 憤怒 사랑 愛 행복
+          幸福 슬픔 悲傷 두려움 恐怖 분노 憤怒 사랑 愛 행복 幸福 슬픔 悲傷
+          두려움 恐怖 분노 憤怒 사랑 愛 행복 幸福 슬픔 悲傷 두려움 恐怖 분노
+          憤怒 사랑 愛 행복 幸福 슬픔 悲傷 두려움 恐怖 분노 憤怒 사랑 愛
+        </marquee>
+
+        <!-- section 1,marquee 끝 -->
+
+        <!-- 행복 시작 -->
+        <div id="happy_box">
+          <div id="img_box"></div>
+          <div id="about_text">
+            <ul>
+              <li>HAPPY</li>
+              <li>행복</li>
+              <li>
+                순간적인 기쁨을 넘어 삶 속에서 자신이 원하는 것을 이루며 느끼는
+                내면의 평화와 만족감입니다. 외부의 조건에 의존하기보다는 자기
+                자신과의 조화에서 비롯되며, 일상 속 소소한 기쁨을 인정하고
+                감사하는 마음에서 시작됩니다.
+              </li>
+              <li>
+                <button><a href="행복.html">더 보기 →</a></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 행복 끝 -->
+
+        <!-- 슬픔 시작 -->
+        <div id="sad_box">
+          <div id="img_box"></div>
+          <div id="about_text">
+            <ul>
+              <li>SAD</li>
+              <li>슬픔</li>
+              <li>
+                무언가를 잃었거나, 기대했던 것이 이루어지지 않을 때 느끼는 감정이다.
+슬픔은 마음 깊은 곳에서부터 우러나오는 고통이나 허무함으로, 상실감이나 좌절에서 비롯되기도 한다. 이는 때로 외부로 표현되지 않고 내면에 머물며 사람을 고요하게 만들지만, 동시에 치유와 성장을 위한 중요한 감정이다.
+              </li>
+              <li>
+                <button><a href="슬픔.html">더 보기 →</a></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 슬픔 끝 -->
+
+        <!-- 불안 시작 -->
+        <div id="nurvous_box">
+          <div id="img_box"></div>
+          <div id="about_text">
+            <ul>
+              <li>NURVOUS</li>
+              <li>불안</li>
+              <li>
+                미래에 닥칠 수 있는 위험이나 불확실성에 대해 느끼는 심리적 긴장 상태입니다.
+            이는 실제로 발생한 위험보다는 예상되는 상황과 결과에 대한 걱정과 두려움에서
+             비롯되며, 때로는 신체적 반응까지 동반하기도 합니다.
+              </li>
+              <li>
+                <button><a href="불안.html">더 보기 →</a></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 불안 끝 -->
+        <!-- 분노 시작 -->
+        <div id="anger_box">
+          <div id="img_box"></div>
+          <div id="about_text">
+            <ul>
+              <li>ANGER</li>
+              <li>분노</li>
+              <li>
+                분노는 불공정하거나 부당한 상황에 대한 강한 감정적 반응으로, 종종 불편함이나 위협을
+             느낄 때 발생합니다. 이는 보호적인 역할을 할 수 있지만, 과도하게 표현되면 갈등을 초래할 수 있습니다.
+              </li>
+              <li>
+                <button><a href="분노.html">더 보기 →</a></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 분노 끝 -->
+        <div id="aversion_box">
+          <div id="img_box"></div>
+          <div id="about_text">
+            <ul>
+              <li>AVERSION</li>
+              <li>혐오</li>
+              <li>
+                강한 불쾌감이나 거부감을 느끼는 감정으로, 특정 사람, 행동, 또는 상황에 대해 강한 부정적인 반응을 보이는 것입니다. 이는 종종 공포, 경멸, 혐오감을 동반하며,
+                사람이나 대상을 사회적, 도덕적, 혹은 개인적 기준에 맞지 않는다고 판단할 때 나타납니다. 혐오는 감정적으로 매우 강하고, 때로는 행동으로 이어지기도 합니다.
+              </li>
+              <li>
+                <button><a href="혐오.html">더 보기 →</a></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 혐오시작 -->
+      </section>
+      <footer>
+        <p>© 2024, MyWebsite. All rights reserved</p>
+        <p>
+          22161083 박민규 | 010-1234-1234 | Mail: mnmnmnmnmn@google.com |
+          계원예술대학교 123-123
+        </p>
+        <p>이용약관 | 직무수행능력평가</p>
+      </footer>
+    </wrap>
+  </body>
+</html>
